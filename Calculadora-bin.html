@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Calculadora</title>
+   <meta charset="utf-8">
+   <style>
+   body{
+     background:lightgray;
+   }
+   #main{
+   position:absolute;
+   top:10%;
+   left:23%;
+   width:40%;
+   background:rgb(66, 129, 172);
+   text-align:center;
+   padding:6%;
+     
+   }
+   #bin,#dec{
+   width:50%;
+   margin:1%;
+   height:30px;
+   font-size:16px;
+   font-weight:bold;
+   }
+   .btn {
+  
+  width:23%;
+  padding:15px;
+  margin:10px;
+  background:#30160e;
+  border:1px solid #30160e;
+  color:whitesmoke;
+  }
+  .lbl {
+  
+  font-size:16px;
+  font-weight:bold;
+  font-family:ariel,sans-serif;
+  padding:15px;
+  }
+   </style>
+</head>
+<body>
+<div id="main">
+<h1>Convertir de binario a Decimal</h1>
+<label class="lbl" for="bin">Ingrese número binario</label><br>
+<input type="text" id="bin"><br>
+<label class="lbl" for="dec">número Decimal</label><br>
+<input type="text" id="dec"><br>
+<button onclick="binToDec()" class="btn">Convertir</button>
+<button onclick="binToDecReset()" class="btn">Reset</button>
+</main>
+<script>
+
+function binToDec(){
+
+var str = document.getElementById("bin").value;
+var output = parseInt(str,2);
+return document.getElementById("dec").value = output;
+}
+
+function binToDecReset() {
+
+    document.getElementById("bin").value = "";
+	document.getElementById("dec").value = "";
+}
+
+</script>
+</body>
+</html>
